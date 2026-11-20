@@ -7,7 +7,7 @@
 <p align="center">Твоя библиотека нейросетей. Один чат — множество моделей.</p>
 
 <p align="center">
-  <a href="https://github.com/RTrueno/allAI/releases/tag/v1.0.0">Скачать приложение</a> ·
+  <a href="https://github.com/RTrueno/allAI/releases">Выпуски приложения</a> ·
   <a href="https://allai-library-ruslan.rainyhedgehog.chatgpt.site/">Веб-версия</a> ·
   <a href="desktop/README.md">Сборка и запуск</a>
 </p>
@@ -29,7 +29,7 @@ allAI помогает находить нейросети и общаться �
 
 | Система | Доступность |
 | --- | --- |
-| Windows x64 | [Установщик](https://github.com/RTrueno/allAI/releases/download/v1.0.0/allAI-1.0.0-windows-x64-setup.exe) · [Portable без установки](https://github.com/RTrueno/allAI/releases/download/v1.0.0/allAI-1.0.0-windows-x64-portable.exe) |
+| Windows x64 | Установщик `.exe` и Portable подготовлены. Готовый выпуск будет доступен в [Releases](https://github.com/RTrueno/allAI/releases). |
 | macOS — Apple Silicon и Intel | Предусмотрена сборка `.dmg` и `.zip` через GitHub Actions. Готовые файлы нужно добавить в Releases после успешной сборки. |
 | Linux x64 | Предусмотрена сборка `.AppImage` и `.deb` через GitHub Actions. Готовые файлы нужно добавить в Releases после успешной сборки. |
 
@@ -72,7 +72,7 @@ npm run dist:linux
 
 Для сборки всех платформ через GitHub открой **Actions → Desktop builds → Run workflow**. После завершения файлы появятся в **Artifacts**. Workflow должен быть загружен в `.github/workflows/desktop.yml` в основной ветке репозитория.
 
-Инструкция по веб-приложению, базе и API: [README-ALLAI.md](README-ALLAI.md).
+Инструкция по веб-приложению, базе и API: [README-ALLAI.md](docs/WEB.md).
 
 ## Технологии
 
