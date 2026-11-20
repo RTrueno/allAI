@@ -1,0 +1,18 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const root = path.resolve(__dirname, '..');
+const yaml = require(path.join(root, 'desktop/node_modules/js-yaml'));
+const workflow = yaml.load(fs.readFileSync(path.join(root, '.github/workflows/desktop.yml'), 'utf8'));
+assert.equal(workflow.jobs.build.strategy.matrix.include.length, 3);
+assert.equal(workflow.permissions.contents, 'read');
+assert.equal(workflow.jobs.build.defaults.run['working-directory'], 'desktop');
+console.log('PASS: workflow YAML, 3 platforms, read-only repository permissions');
+const asar = require(path.join(root, 'desktop/node_modules/@electron/asar'));
+const packaged = path.join(root, 'desktop/release/win-unpacked/resources/app.asar');
+const main = asar.extractFile(packaged, 'main.cjs').toString();
+assert.equal(main, fs.readFileSync(path.join(root, 'desktop/main.cjs'), 'utf8'));
+assert.match(main, /show: true/);
+const entries = asar.listPackage(packaged);
+assert.ok(!entries.some(name => /(?:^|[/\\])(?:\.env|\.dev\.vars|\.git|node_modules)(?:$|[./\\])/.test(name)));
+console.log('PASS: packaged application matches current source and contains no environment files or node_modules');
