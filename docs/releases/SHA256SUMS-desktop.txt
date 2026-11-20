@@ -1,0 +1,3 @@
+30c3991867a94acec76469f4afcf8bb0718ae675d0a37552300ca79dcb5b47df  allAI-1.0.0-windows-x64-setup.exe
+ca80b374dc85533cf0c1b64cba25829af3253415f782a9bc2653c776f4245750  allAI-1.0.0-windows-x64-portable.exe
+00dd48ccbad291ea569440ce6e43080660cf39112af2279a4758013e644cca5f  allAI-desktop-source.zip
