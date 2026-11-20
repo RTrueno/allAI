@@ -7,7 +7,7 @@
 <p align="center">Твоя библиотека нейросетей. Один чат — множество моделей.</p>
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/allAI/releases/tag/v1.0.0">Скачать приложение</a> ·
+  <a href="https://github.com/RTrueno/allAI/releases/tag/v1.0.0">Скачать приложение</a> ·
   <a href="https://allai-library-ruslan.rainyhedgehog.chatgpt.site/">Веб-версия</a> ·
   <a href="desktop/README.md">Сборка и запуск</a>
 </p>
@@ -29,7 +29,7 @@ allAI помогает находить нейросети и общаться �
 
 | Система | Доступность |
 | --- | --- |
-| Windows x64 | [Установщик](https://github.com/YOUR_USERNAME/allAI/releases/download/v1.0.0/allAI-1.0.0-windows-x64-setup.exe) · [Portable без установки](https://github.com/YOUR_USERNAME/allAI/releases/download/v1.0.0/allAI-1.0.0-windows-x64-portable.exe) |
+| Windows x64 | [Установщик](https://github.com/RTrueno/allAI/releases/download/v1.0.0/allAI-1.0.0-windows-x64-setup.exe) · [Portable без установки](https://github.com/RTrueno/allAI/releases/download/v1.0.0/allAI-1.0.0-windows-x64-portable.exe) |
 | macOS — Apple Silicon и Intel | Предусмотрена сборка `.dmg` и `.zip` через GitHub Actions. Готовые файлы нужно добавить в Releases после успешной сборки. |
 | Linux x64 | Предусмотрена сборка `.AppImage` и `.deb` через GitHub Actions. Готовые файлы нужно добавить в Releases после успешной сборки. |
 
@@ -80,4 +80,4 @@ npm run dist:linux
 
 ## Обратная связь
 
-Нашёл ошибку или придумал улучшение? [Создай issue](https://github.com/YOUR_USERNAME/allAI/issues) и опиши шаги воспроизведения. Не прикладывай API-ключи, пароли и коды входа.
+Нашёл ошибку или придумал улучшение? [Создай issue](https://github.com/RTrueno/allAI/issues) и опиши шаги воспроизведения. Не прикладывай API-ключи, пароли и коды входа.

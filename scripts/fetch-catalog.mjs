@@ -1,0 +1,1 @@
+const r=await fetch('https://openrouter.ai/api/v1/models',{signal:AbortSignal.timeout(15000)});console.log('OpenRouter HTTP',r.status);if(r.ok){const d=await r.json();console.log('Models:',d.data.length);}else console.log((await r.text()).slice(0,300));
