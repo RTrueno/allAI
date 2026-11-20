@@ -1,0 +1,89 @@
+{
+  "name": "allai-desktop",
+  "productName": "allAI",
+  "version": "1.0.0",
+  "description": "Библиотека нейросетей и единый чат с моделями OpenRouter",
+  "author": "allAI",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "node scripts/run.cjs",
+    "test:smoke": "node scripts/run.cjs --smoke-test",
+    "test": "node --test test/*.test.cjs",
+    "pack": "electron-builder --dir --publish never",
+    "dist": "electron-builder --publish never",
+    "dist:win": "electron-builder --win nsis portable --x64 --publish never",
+    "dist:mac": "electron-builder --mac dmg zip --publish never",
+    "dist:linux": "electron-builder --linux AppImage deb --x64 --publish never"
+  },
+  "build": {
+    "appId": "app.allai.desktop",
+    "productName": "allAI",
+    "asar": true,
+    "directories": {
+      "output": "release",
+      "buildResources": "assets"
+    },
+    "files": [
+      "main.cjs",
+      "policy.cjs",
+      "preload.cjs",
+      "ui/**/*",
+      "assets/icon.png",
+      "package.json"
+    ],
+    "artifactName": "allAI-${version}-${os}-${arch}.${ext}",
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "allAI",
+      "deleteAppDataOnUninstall": false,
+      "installerLanguages": [
+        "ru_RU",
+        "en_US"
+      ],
+      "artifactName": "allAI-${version}-windows-${arch}-setup.exe"
+    },
+    "portable": {
+      "artifactName": "allAI-${version}-windows-${arch}-portable.exe"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns",
+      "hardenedRuntime": true,
+      "darkModeSupport": true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "assets/icon.png",
+      "desktop": {
+        "entry": {
+          "Name": "allAI",
+          "Comment": "Библиотека нейросетей и чат с AI"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "electron": "45.4.1",
+    "electron-builder": "26.18.0"
+  }
+}
